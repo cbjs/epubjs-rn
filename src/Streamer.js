@@ -109,6 +109,7 @@ class EpubStreamer {
   }
 
   filename(bookUrl) {
+    return new Date().getTime();
     let uri = new Uri(bookUrl);
     return uri.filename.replace(".epub", "");
   }
